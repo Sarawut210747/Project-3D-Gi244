@@ -30,7 +30,6 @@ public class GoToNextSecne : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Alpha1)) 
             {
                 SceneManager.LoadScene("EndCredit");
-                Debug.Log("dawd");
             }
             else if (Input.GetKeyDown(KeyCode.Alpha2)) 
             {
@@ -43,23 +42,6 @@ public class GoToNextSecne : MonoBehaviour
     {
         dialogPanel.SetActive(true);
         messageText.text = "เข้ามั้ย?";
-    }
-
-    private void OnYesClicked()
-    {
-        if (playerInventory != null)
-        {
-            if (playerInventory.HasKey(doorKeyID))
-            {
-                //SceneManager.LoadScene("EndCredit");
-            }
-            else
-            {
-                
-                messageText.text = "อยากเข้าไปก็ไปหากุญแจมา";
-            }
-        }
-        
     }
 
     private void OnNoClicked()

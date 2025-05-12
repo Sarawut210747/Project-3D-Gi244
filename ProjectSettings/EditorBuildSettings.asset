@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Score.unity
     guid: f3f8f454452daa44192c2e3b55e30cb9
   - enabled: 1
-    path: Assets/Asset/LowPoly Mysterious Dungeon/Scenes/Mysterious Dungeon.unity
+    path: Assets/Scenes/Mysterious Dungeon.unity
     guid: 99870f4b5e6f35440837b8379b6997b9
   - enabled: 1
     path: Assets/Scenes/GameOver.unity

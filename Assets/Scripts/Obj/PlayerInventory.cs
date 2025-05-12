@@ -10,7 +10,6 @@ public class PlayerInventory : MonoBehaviour
         if (!keys.Contains(keyID))
         {
             keys.Add(keyID);
-            Debug.Log("เก็บกุญแจดอกที่ " + keyID);
         }
     }
 

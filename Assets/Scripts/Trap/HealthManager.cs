@@ -78,7 +78,6 @@ public class HealthManager : MonoBehaviour
     }
     public void RestartGame()
     {
-    HealthManager.instance.ResetLives(); // รีเซ็ตชีวิต
     SceneManager.LoadScene("DemoMAP_version1");
     }
 }

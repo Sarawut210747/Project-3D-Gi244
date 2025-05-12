@@ -41,8 +41,7 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void QuitGame()
-    {
-        Debug.Log("Quit Game!");
+    {       
        SceneManager.LoadScene("Mainmanu");  // ออกจากเกม (ใช้ได้เมื่อ Build จริง)
     }
 }

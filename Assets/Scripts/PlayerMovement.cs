@@ -3,9 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float climbSpeed = 3f;
-    private bool isClimbing = false;
-    private bool isNearLadder = false;
+
    public float speed = 5f;
     public float gravity = -9.81f;
     public float jumpHeight = 2f;
@@ -55,12 +53,6 @@ public class PlayerMovement : MonoBehaviour
         {
             velocity.y = -2f;
         }
-        if (isClimbing)
-        {
-            float vertical = Input.GetAxis("Vertical");
-            Vector3 climbDirection = new Vector3(0f, vertical * climbSpeed, 0f);
-            controller.Move(climbDirection * Time.deltaTime);
-        }
         else
         {       
             velocity.y += gravity * Time.deltaTime;
@@ -80,7 +72,7 @@ public class PlayerMovement : MonoBehaviour
         {
             moveDirection = Vector3.zero; 
         }
-        // กระโดด
+       
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
@@ -97,23 +89,5 @@ public class PlayerMovement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
     }
-        private void OnTriggerEnter(Collider other)
-        {
-            if (other.CompareTag("Ladder"))
-            {
-                isNearLadder = true;
-                Debug.Log("Near Ladder");
-            }
-        }
-
-        private void OnTriggerExit(Collider other)
-        {
-            if (other.CompareTag("Ladder"))
-            {
-                isNearLadder = false;
-                isClimbing = false;
-                Debug.Log("Left Ladder");
-            }
-        }
     
 }

@@ -32,7 +32,6 @@ public class ChoiceDialog : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Alpha1)) 
             {
                 OnYesClicked();
-                Debug.Log("dawd");
             }
             else if (Input.GetKeyDown(KeyCode.Alpha2)) 
             {
